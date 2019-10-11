@@ -40,27 +40,26 @@ public class LongestCommonPrefix {
 			 return "";
 		 }
 		 
-			 String firstWord = strs[0];
+		 String firstWord = strs[0];
 			 
-			 if(firstWord.equals("")) {
+		 if(firstWord.equals("")) {
+			 return "";
+		 }
+			 
+		 limit = firstWord.length();
+
+		 for(int j=1;j<strs.length;j++) {
+			 String tmpWord = strs[j];
+			 if(tmpWord.equals("")) {
 				 return "";
 			 }
-			 
-			 limit = firstWord.length();
-			 
-			 for(int j=1;j<strs.length;j++) {
-				 String tmpWord = strs[j];
-				 if(tmpWord.equals("")) {
-					 return "";
-				 }
-				 longestPrefix = longestPrefixCalculation(firstWord,tmpWord);
-				 
-				 if(longestPrefix.equals("")) {
-					 return "";
-				 }
-				 
+			 longestPrefix = longestPrefixCalculation(firstWord,tmpWord);
+
+			 if(longestPrefix.equals("")) {
+				 return "";
 			 }
 
+		 }
 		 
 		 return longestPrefix;
 	 }
