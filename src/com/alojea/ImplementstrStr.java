@@ -1,5 +1,6 @@
 package com.alojea;
 
+
 /**
  * 
  * @author alejandro
@@ -38,20 +39,14 @@ public class ImplementstrStr {
 				return 0;
 			}else {
 				for(int i=0;i<haystack.length();i++) {
-					for(int j=index;j<needle.length();j++) {
+					for(int j=0;j<needle.length();j++) {
 						if(haystack.charAt(i)==needle.charAt(j)) {
-							if(firstFound == -1){
-								firstFound = i;
+							if(haystack.substring(i, needle.length()+i).contains(needle)) {
+								return i;
+							} else {
+								break;
 							}
-							index = j+1;
-							break;
-						}else if(firstFound!=-1 && i!=0) {
-							firstFound = -1;
-							index = 0;
 						}
-					}
-					if(index == needle.length()) {
-						break;
 					}
 				}
 			}

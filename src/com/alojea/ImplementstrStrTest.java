@@ -6,7 +6,7 @@ import org.junit.Test;
 
 public class ImplementstrStrTest {
 
-    ImplementstrStr implementstrStrClass;
+ImplementstrStr implementstrStrClass;
     
     @Before
     public void setUp() throws Exception {
@@ -81,6 +81,13 @@ public class ImplementstrStrTest {
     	String needle = "issip";
     	Assert.assertEquals(4, implementstrStrClass.strStr(haystack, needle));
     }
-
+    
+    @Test
+    public void example5Test() {
+    	String haystack = "mississippi";
+    	String needle = "pi";
+    	Assert.assertEquals(9, implementstrStrClass.strStr(haystack, needle));
+    }
 }
+
 
