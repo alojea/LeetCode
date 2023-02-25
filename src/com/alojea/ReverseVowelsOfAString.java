@@ -1,4 +1,4 @@
-public class RevertVowels {
+public class ReverseVowelsOfAString {
 	
 	public static void main(String[] args) {
 		
